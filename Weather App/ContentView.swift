@@ -4,6 +4,7 @@
 //
 //  Created by Adarsh Raghav on 03/05/21.
 //
+import SDWebImageSwiftUI
 import SwiftUI
 
 struct ContentView: View {
@@ -31,10 +32,13 @@ struct ContentView: View {
                             Text(day.day)
                                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             HStack(alignment: .center){
-                                Image(systemName: "hourglass")
-                                    .font(.title)
-                                    .frame(width: 50, height: 50)
-                                    .background(RoundedRectangle(cornerRadius: 10 ).fill(Color.green))
+                                WebImage(url: day.weatherIconURL)
+                                    .resizable()
+                                    .placeholder{
+                                        Image(systemName: "hourglass")
+                                    }
+                                    .scaledToFit()
+                                    .frame(width: 75)
                                 VStack(alignment: .leading){
                                     Text(day.overview)
                                     HStack(){
