@@ -10,6 +10,7 @@
 		EF21F13B2640060E00619723 /* ForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF21F13A2640060E00619723 /* ForecastViewModel.swift */; };
 		EF21F13E26400F8600619723 /* ForecastListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF21F13D26400F8600619723 /* ForecastListViewModel.swift */; };
 		EF21F14226403E5100619723 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = EF21F14126403E5100619723 /* SDWebImageSwiftUI */; };
+		EF21F145264061B100619723 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF21F144264061B100619723 /* UIApplication+Extension.swift */; };
 		EF6A13D7263FBC5400B90DE3 /* Weather_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A13D6263FBC5400B90DE3 /* Weather_AppApp.swift */; };
 		EF6A13D9263FBC5400B90DE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A13D8263FBC5400B90DE3 /* ContentView.swift */; };
 		EF6A13DB263FBC5500B90DE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6A13DA263FBC5500B90DE3 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		EF21F13A2640060E00619723 /* ForecastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewModel.swift; sourceTree = "<group>"; };
 		EF21F13D26400F8600619723 /* ForecastListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListViewModel.swift; sourceTree = "<group>"; };
+		EF21F144264061B100619723 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		EF6A13D3263FBC5400B90DE3 /* Weather App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF6A13D6263FBC5400B90DE3 /* Weather_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather_AppApp.swift; sourceTree = "<group>"; };
 		EF6A13D8263FBC5400B90DE3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			children = (
 				EF6A13D6263FBC5400B90DE3 /* Weather_AppApp.swift */,
 				EF6A13D8263FBC5400B90DE3 /* ContentView.swift */,
+				EF21F144264061B100619723 /* UIApplication+Extension.swift */,
 				EF21F13A2640060E00619723 /* ForecastViewModel.swift */,
 				EF21F13D26400F8600619723 /* ForecastListViewModel.swift */,
 				EF6A13E9263FBCB900B90DE3 /* Forecast.swift */,
@@ -164,6 +167,7 @@
 				EF6A13D7263FBC5400B90DE3 /* Weather_AppApp.swift in Sources */,
 				EF21F13B2640060E00619723 /* ForecastViewModel.swift in Sources */,
 				EF21F13E26400F8600619723 /* ForecastListViewModel.swift in Sources */,
+				EF21F145264061B100619723 /* UIApplication+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

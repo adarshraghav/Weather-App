@@ -21,7 +21,22 @@ struct ContentView: View {
                     .frame(width: 100)
                     .padding(.vertical)
                     HStack {
-                        TextField("Enter your location ", text: $forecastListVM.location) .textFieldStyle(RoundedBorderTextFieldStyle())
+                        TextField("Enter your location ", text: $forecastListVM.location,
+                                  onCommit: {
+                                    forecastListVM.getWeatherForecast()
+                                  })
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .overlay(
+                            Button(action: {
+                                forecastListVM.location = ""
+                                forecastListVM.getWeatherForecast()
+                            }){
+                                Image(systemName: "xmark.circle")
+                                    .foregroundColor(.gray)
+                            }
+                            .padding(.horizontal),
+                            alignment: .trailing
+                        )
                         Button{
                             forecastListVM.getWeatherForecast()
                         } label: {
@@ -42,6 +57,7 @@ struct ContentView: View {
                                         .frame(width: 75)
                                     VStack(alignment: .leading){
                                         Text(day.overview)
+                                            .font(.title2)
                                         HStack(){
                                             Text(day.high)
                                             Text(day.low)

@@ -17,7 +17,8 @@ class ForecastListViewModel: ObservableObject {
     @Published var forecasts: [ForecastViewModel] = []
     var appError: AppError?=nil
     @Published var isLoading: Bool = false
-    @AppStorage ("location") var location: String = ""
+    @AppStorage ("location") var storageLocation: String = ""
+    @Published var location = ""
     @AppStorage ("system") var system: Int = 0 {
         didSet {
             for i in 0..<forecasts.count {
@@ -27,15 +28,27 @@ class ForecastListViewModel: ObservableObject {
     }
     
     init() {
-        if location != "" {
-            getWeatherForecast()
-        }
+        location = storageLocation
+        getWeatherForecast()
     }
     func getWeatherForecast() {
+        storageLocation = location
+        UIApplication.shared.endEditing()
+        if location == ""{
+            forecasts = []
+        }else{
         isLoading = true
         let apiService = APIService.shared
         CLGeocoder().geocodeAddressString(location) { (placemarks, error) in
-            if let error = error {
+            if let error = error as? CLError{
+                switch error.code{
+                case .locationUnknown, .geocodeFoundNoResult, .geocodeFoundPartialResult:
+                    self.appError = AppError(errorString: NSLocalizedString("Unable to determine location", comment: ""))
+                case .network:
+                    self.appError = AppError(errorString: NSLocalizedString("Please connect to a network", comment: ""))
+                default:
+                    self.appError = AppError(errorString: error.localizedDescription)
+                }
                 self.isLoading = false
                 self.appError = AppError(errorString: error.localizedDescription)
                 print(error.localizedDescription)
@@ -63,5 +76,6 @@ class ForecastListViewModel: ObservableObject {
             }
         }
 
+    }
     }
 }
