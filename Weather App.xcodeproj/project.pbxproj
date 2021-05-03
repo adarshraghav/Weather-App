@@ -11,6 +11,8 @@
 		EF6A13D9263FBC5400B90DE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A13D8263FBC5400B90DE3 /* ContentView.swift */; };
 		EF6A13DB263FBC5500B90DE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6A13DA263FBC5500B90DE3 /* Assets.xcassets */; };
 		EF6A13DE263FBC5500B90DE3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6A13DD263FBC5500B90DE3 /* Preview Assets.xcassets */; };
+		EF6A13E7263FBC9600B90DE3 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A13E6263FBC9600B90DE3 /* APIService.swift */; };
+		EF6A13EA263FBCB900B90DE3 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A13E9263FBCB900B90DE3 /* Forecast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		EF6A13DA263FBC5500B90DE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF6A13DD263FBC5500B90DE3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EF6A13DF263FBC5500B90DE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF6A13E6263FBC9600B90DE3 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		EF6A13E9263FBCB900B90DE3 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +58,9 @@
 			children = (
 				EF6A13D6263FBC5400B90DE3 /* Weather_AppApp.swift */,
 				EF6A13D8263FBC5400B90DE3 /* ContentView.swift */,
+				EF6A13E9263FBCB900B90DE3 /* Forecast.swift */,
 				EF6A13DA263FBC5500B90DE3 /* Assets.xcassets */,
+				EF6A13E6263FBC9600B90DE3 /* APIService.swift */,
 				EF6A13DF263FBC5500B90DE3 /* Info.plist */,
 				EF6A13DC263FBC5500B90DE3 /* Preview Content */,
 			);
@@ -138,7 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF6A13EA263FBCB900B90DE3 /* Forecast.swift in Sources */,
 				EF6A13D9263FBC5400B90DE3 /* ContentView.swift in Sources */,
+				EF6A13E7263FBC9600B90DE3 /* APIService.swift in Sources */,
 				EF6A13D7263FBC5400B90DE3 /* Weather_AppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
