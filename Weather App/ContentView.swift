@@ -67,7 +67,7 @@ struct ContentView: View {
             if let lat = placemarks?.first?.location?.coordinate.latitude,
                let lon = placemarks?.first?.location?.coordinate.longitude {
                 // Don't forget to use your own key
-                apiService.getJSON(urlString: "https://api.openweathermap.org/data/2.5/onecall?lat=28.463673&lon=77.033420&exclude=current,minutely,hourly,alerts&appid=f19f6952fb418652f8c32d2880d175bb",
+                apiService.getJSON(urlString: "https://api.openweathermap.org/data/2.5/onecall?lat=\(lat)&lon=\(lon)&exclude=current,minutely,hourly,alerts&appid=f19f6952fb418652f8c32d2880d175bb",
                                    dateDecodingStrategy: .secondsSince1970) { (result: Result<Forecast,APIService.APIError>) in
                     switch result {
                     case .success(let forecast):
